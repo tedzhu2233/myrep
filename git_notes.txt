@@ -40,4 +40,24 @@ git reset命令既可以回退版本，也可以把暂存区的修改回退到�
 git rm test.txt (删文件) 
 git rm -r mytest (删文件夹)
 提交修改git commit -m "Delete files."
-git push origin xxx 
+git push origin master（分支名）
+
+创建分支
+git branche dev(分支名)
+如提交到远程主机：git push origin dev
+
+切换分支
+git checkout master
+
+合并分支
+先切换到当前分支master，然后执行以下命令
+git merge dev
+
+删除分支
+git branch -d dev
+
+禁用Fast forward合并分支，合并分支时，加--no-ff参数
+git merge --no-ff -m "merge with no-ff" dev
+
+强行删除一个没有被合并过的分支
+git branch -D <name>
