@@ -1,0 +1,43 @@
+我的github仓库：git@github.com:tedzhu2233/myrep.git
+
+克隆远程仓库：
+git clone git@github.com:tedzhu2233/myrep.git
+
+本地库关联远程库，在本地仓库目录运行：
+git remote add origin git@github.com:tedzhu2233/myrep.git
+
+推送master分支的所有内容
+第一次：git push -u origin master
+以后：git push origin master
+
+推送新添加文件：
+$ git add text.txt
+$ git commit -m"添加新文件"
+$ git push origin master
+
+取回远程主机某个分支的更新：
+$ git pull origin master
+
+查看版本历史：
+git log
+git log --pretty=oneline
+
+版本回退：
+git reset --hard HEAD^
+或 git reset --hard 61bf5
+
+撤销修改：
+git checkout -- readme.txt
+这里有两种情况：
+一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；
+一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
+
+将暂存区的文件修改回退到工作区
+git reset HEAD <file>
+git reset命令既可以回退版本，也可以把暂存区的修改回退到工作区
+
+删除文件或文件夹
+git rm test.txt (删文件) 
+git rm -r mytest (删文件夹)
+提交修改git commit -m "Delete files."
+git push origin xxx 
